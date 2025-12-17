@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Movie tuple insert</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+div.mydiv {
+  width:70%;
+  overflow:auto;
+}
+div.mydiv div {
+  width:33%;  
+  float:left;
+}
+</style>
+<body>
+    <div class="mydiv">
+        <div>
+        <h1></h1>
+        </div>
+        <div style="background-color: blue;">
+        <h2 align="center" style="color:white;">Movie Table 관리</h2>
+        </div>
+        <div>
+        <h1></h1>
+        </div>
+    </div>
+    <form method="post" target="iframe1" action="movie_manage.php">
+        <table style="border:2px solid grey;background-color: white;color: black;" cellspacing="2px" cellpadding="2px" width="70%">
+            <tr style="border:2px solid blue;background-color: purple;color: white;" align="center"> 
+                <th width="40%"> 영화제목 <th> 개봉년도 <th> 상영시간 
+                <th> 제작자 번호 <th width="10%"> 영화사 </tr> 
+            <tr style="border:2px solid blue;background-color: #3399FF;color: #E0E0E0;" align="center"> 
+                <td> <input type="text" size="50" maxlength="100" name="title"> 
+                <td> <input type="number" min="1900" max="2025" size="4" maxlength="4" name="year">
+                <td> <input type="number" min="50" max="300" size="3" maxlength="3" name="length">
+                <td> <input type="number" min="1" max="100" size="3" maxlength="3" name="pno">
+                <td> <input type="text" size="10" maxlength="50" name="sname"> 
+            </tr>
+            <tr style="border:none;background-color: white;color: #E0E0E0;" align="left"> 
+                <td colspan="5">  <input type="submit" name="submit" value="검색">  <input type="submit" name="submit" value="삽입"> <input type="submit" name="submit" value="갱신"> 
+                <input type="reset" name="reset" value="초기화"> 
+            </tr>
+            <tr height="800px">
+                <td colspan="5"> <iframe height="800px" width="100%" name="iframe1"  style="border:1px solid blue;"></iframe>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
